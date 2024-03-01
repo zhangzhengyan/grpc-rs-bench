@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package pingpong;
+
+// The greeting service definition.
+service Greeter {
+      // Sends a greeting
+      rpc SayHello (PingRequest) returns (PongReply) {}
+}
+
+// The request message containing the user's name.
+message PingRequest {
+      bytes   data = 1;
+      int32   resp_length = 2;
+}
+
+// The response message containing the greetings
+message PongReply {
+      bytes   data = 1;
+}
